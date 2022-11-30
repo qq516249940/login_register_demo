@@ -18,7 +18,7 @@ def login(request):
     if request.method == 'POST':
         login_form = forms.UserForm(request.POST)
         message = '请检查填写的内容！'
-        if login_form.is_valid():
+        if login_form.is_valid():        # 如果添加了验证码，is_valid也会对验证码进行验证   
             username = login_form.cleaned_data.get('username')
             password = login_form.cleaned_data.get('password')
 
