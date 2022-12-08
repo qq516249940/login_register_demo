@@ -123,3 +123,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+## 邮件设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.exmail.qq.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'xxxx@qq.com'
+EMAIL_HOST_PASSWORD = 'xxxxxxx'
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = '名字 <xxxxx@qq.com>'
+
+# 注册有效期天数
+CONFIRM_DAYS = 7
